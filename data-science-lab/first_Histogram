@@ -1,0 +1,31 @@
+# Run to show a Histogram
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.style.use('ggplot')
+
+np.random.seed(seed=0)
+x = np.random.randn(1000)
+y = np.random.randn(100)
+z = np.random.randn(10)
+
+hist, bin_edges = np.histogram(x, bins=10)
+print("hist:", hist)
+print("bin_edges:", bin_edges)
+
+# plot 1
+
+fig, ax = plt.subplots()
+ax.hist(x, bin_edges, cumulative=False) # type: ignore
+ax.set_xlabel('x')
+ax.set_ylabel('Frequency')
+plt.show()
+
+# plot 2
+
+fig, ax = plt.subplots()
+ax.hist(x, bin_edges, cumulative=True) # type: ignore
+ax.set_xlabel('x')
+ax.set_ylabel('Frequency')
+plt.show()

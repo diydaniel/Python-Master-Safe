@@ -1,0 +1,17 @@
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.style.use('ggplot')
+
+
+x = np.arange(21)
+y = np.random.randint(21, size=21)
+err = np.abs(np.random.randn(21))  # non-negative errors
+
+fig, ax = plt.subplots()
+ax.bar(x, y, yerr=err)
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+plt.show()

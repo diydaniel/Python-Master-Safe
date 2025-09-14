@@ -1,0 +1,19 @@
+
+from scipy import stats
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.style.use('ggplot')
+
+x = np.arange(21)
+y = 5 + 2 * x + 2 * np.random.randn(21)
+slope, intercept, r, *_ = stats.linregress(x, y)
+line = f'Regression line: y={intercept:.2f}+{slope:.2f}x, r={r:.2f}'
+
+fig, ax = plt.subplots()
+ax.plot(x, y, linewidth=0, marker='s', label='Data points')
+ax.plot(x, intercept + slope * x, label=line) # type: ignore
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.legend(facecolor='white')
+plt.show()
