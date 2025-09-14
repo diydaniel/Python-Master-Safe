@@ -1,2 +1,2 @@
 # Python-Master-Safe
-Master source for safe python code
+Master source for python code
