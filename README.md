@@ -1,2 +1,2 @@
 # Python-Master-Safe
-Master source for python code
+Python templates for specific applications. Boiler plate structures that create a scaleable application from the first commit.
