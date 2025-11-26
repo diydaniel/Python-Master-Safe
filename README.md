@@ -1,2 +1,5 @@
 # Python-Master-Safe
-Python templates for specific applications. Boiler plate structures that create a scaleable application from the first commit.
+
+One script application templates. From data science, small games, shell scripts and more.
+
+application template structures to resuse and modify. pygame, godot game engine, FASTapi, asyncio etc 
